@@ -1,48 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ashar Adeel</title>
-<meta name="description" content="Ashar Adeel - CV, dev and personal sites.">
-<link rel="stylesheet" href="index.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ashar Adeel</title>
+  <meta name="description" content="Ashar Adeel - CV, dev and personal sites.">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<main>
-  <div class="name-wrap"><h1 id="name">Ashar <span>Adeel</span></h1></div>
-  <p class="tag">Choose where you want to go.</p>
+  <header id="top">
+    <h1 id="name">Ashar Adeel</h1>
+    <p class="tagline">Where would you like to go?</p>
+  </header>
 
-  <h2>My sites</h2>
-  <div class="grid">
-    <a class="card" href="https://cv.ashars.co.uk">
-      <span class="title">CV</span>
-      <span class="host"><span>cv.ashars.co.uk</span><span class="arrow">&rarr;</span></span>
-    </a>
-    <a class="card" href="https://dev.ashars.co.uk">
-      <span class="title">Dev</span>
-      <span class="host"><span>dev.ashars.co.uk</span><span class="arrow">&rarr;</span></span>
-    </a>
-    <a class="card" href="https://personal.ashars.co.uk">
-      <span class="title">Personal</span>
-      <span class="host"><span>personal.ashars.co.uk</span><span class="arrow">&rarr;</span></span>
-    </a>
-  </div>
+  <main>
+    <nav id="sites" aria-label="Sites">
+      <ul>
+        <li>
+          <a class="card" href="https://cv.ashars.co.uk">
+            <h2>CV</h2>
+            <p>cv.ashars.co.uk</p>
+          </a>
+        </li>
+        <li>
+          <a class="card" href="https://dev.ashars.co.uk">
+            <h2>Dev</h2>
+            <p>dev.ashars.co.uk</p>
+          </a>
+        </li>
+        <li>
+          <a class="card" href="https://personal.ashars.co.uk">
+            <h2>Personal</h2>
+            <p>personal.ashars.co.uk</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </main>
 
-</main>
-<footer>&copy; <span id="yr"></span> Ashar Adeel</footer>
-<script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-  // Scale the name so it spans the full width of the page content.
-  function fitName() {
-    var el = document.getElementById('name');
-    var box = el.parentElement.clientWidth;
-    el.style.fontSize = '100px';
-    var w = el.getBoundingClientRect().width;
-    if (w > 0) el.style.fontSize = (100 * box / w) + 'px';
-  }
-  window.addEventListener('resize', fitName);
-  window.addEventListener('load', fitName);
-  fitName();
-</script>
+  <footer>
+    <p>&copy; 2026 Ashar Adeel</p>
+  </footer>
 </body>
 </html>
